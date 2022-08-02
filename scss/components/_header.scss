@@ -1,0 +1,111 @@
+/* *************     HEADER */
+
+.header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid #eee;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+/***************      LOGO */
+.logo {
+  &__header {
+    color: var(--color-blacklogo);
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+  &__span {
+    color: var(--color-blu);
+  }
+}
+
+/*  header-menu */
+.menu {
+  @extend %flex-alight;
+  // display: flex;
+  // align-items: center;
+  &__item {
+    margin-left: 94px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  &__item:not(:first-child) {
+    margin-left: 50px;
+  }
+  &__link {
+    color: var(--color-black);
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: block;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__link:hover,
+  &__link:focus {
+    color: var(--color-blu);
+  }
+}
+
+/*Contact*/
+.contact {
+  display: block;
+  margin-left: auto;
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: var(--color-grey);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__svg {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: var(--color-blu);
+  }
+}
+
+.page-active {
+  color: var(--color-blu);
+  &::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #2196f3;
+    border-radius: 2px;
+  }
+}
+.page-relative {
+  position: relative;
+}

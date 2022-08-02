@@ -1,0 +1,18 @@
+:root {
+  --color-blacklogo: #000000;
+  --color-blu: #2196f3;
+  --color-black: #212121;
+  --color-grey: #757575;
+  --color-white: #ffffff;
+  --fonts-primary: 'Roboto';
+  --background-color: #2f303a;
+  --font-family-primary: 'Roboto', sans-serif;
+  --color-team: #f5f4fa;
+  // fill: #afb1b8;
+  --fill-grey: #afb1b8;
+}
+
+%flex-alight {
+  display: flex;
+  align-items: center;
+}

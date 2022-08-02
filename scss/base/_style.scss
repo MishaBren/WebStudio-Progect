@@ -1,0 +1,22 @@
+.body {
+  color: var(--color-grey);
+  font-family: var(--font-family-primary);
+  letter-spacing: 0.03em;
+  font-size: 14px;
+}
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}

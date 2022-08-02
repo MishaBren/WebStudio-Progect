@@ -1,0 +1,30 @@
+/* *********** CLIENTS */
+.client {
+  display: flex;
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link:focus,
+  &__link:hover {
+    fill: #2196f3;
+    border-color: #2196f3;
+  }
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #afb1b8;
+
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    transition-property: fill, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
