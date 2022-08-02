@@ -12,7 +12,7 @@
 .logo {
   &__header {
     color: var(--color-blacklogo);
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
@@ -33,9 +33,9 @@
     margin-left: 94px;
     margin-bottom: 0;
     margin-top: 0;
-  }
-  &__item:not(:first-child) {
-    margin-left: 50px;
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
   }
   &__link {
     color: var(--color-black);
@@ -51,10 +51,10 @@
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &__link:hover,
-  &__link:focus {
-    color: var(--color-blu);
+    &:hover,
+    &:focus {
+      color: var(--color-blu);
+    }
   }
 }
 
@@ -79,6 +79,10 @@
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: var(--color-blu);
+    }
   }
   &__item:not(:last-child) {
     margin-right: 50px;
@@ -87,16 +91,12 @@
     margin-right: 10px;
     fill: currentColor;
   }
-  &__link:hover,
-  &__link:focus {
-    color: var(--color-blu);
-  }
 }
 
 .page-active {
   color: var(--color-blu);
   &::after {
-    content: '';
+    content: "";
     width: 100%;
     height: 4px;
     position: absolute;

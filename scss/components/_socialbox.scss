@@ -3,9 +3,6 @@
   display: flex;
   justify-content: center;
 
-  &__item:not(:last-child) {
-    margin-right: 10px;
-  }
   &__item--bgblu:hover,
   &__item--bgblu:focus {
     background-color: var(--color-blu);
@@ -24,6 +21,9 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
   &__link--grey:hover,
   &__link--grey:focus {
