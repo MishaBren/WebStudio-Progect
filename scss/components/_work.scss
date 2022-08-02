@@ -4,9 +4,9 @@
   align-items: center;
   &__item {
     position: relative;
-  }
-  &__item:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   &__bck {
