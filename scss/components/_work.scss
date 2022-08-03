@@ -2,6 +2,7 @@
 .work {
   display: flex;
   align-items: center;
+
   &__item {
     position: relative;
     &:not(:last-child) {
@@ -30,14 +31,21 @@
   }
 }
 .padding-resset {
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
   padding-top: 0;
 }
 .title-secondary {
   margin-bottom: 50px;
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   text-align: center;
   color: var(--color-black);
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
 }

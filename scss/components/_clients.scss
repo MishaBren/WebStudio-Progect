@@ -1,9 +1,8 @@
 /* *********** CLIENTS */
 .client {
   display: flex;
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
+  flex-wrap: wrap;
+  justify-content: space-around;
 
   &__link {
     width: 100%;
@@ -13,7 +12,7 @@
     align-items: center;
     fill: #afb1b8;
 
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid #afb1b8;
     border-radius: 4px;
@@ -25,6 +24,35 @@
     &:hover {
       fill: #2196f3;
       border-color: #2196f3;
+    }
+
+    @media only screen and (min-width: 0px) and (max-width: 768px) {
+      max-width: 354px;
+      // &:nth-child(2n + 1) {
+      //   margin-right: 15px;
+      // }
+      &:nth-child(-n + 2) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1200px) {
+      max-width: 354px;
+      &:nth-child(3n) {
+        margin-right: 0px;
+      }
+
+      // &:nth-child(3n + 1) {
+      //   margin-right: 20px;
+      // }
+      &:nth-child(-n + 2) {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+      height: 92px;
     }
   }
 }

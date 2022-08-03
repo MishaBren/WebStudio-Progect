@@ -1,67 +1,127 @@
 /*                              benefits */
 .benefits {
-  @extend %flex-alight;
-  // display: flex;
-  // align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
   &__items {
-    height: 268px;
+    height: 226px;
+
+    // @media screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (max-width: 1200px) {
+      height: 224px;
+      &:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
+      &:nth-child(-n + 2) {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      height: 270px;
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
   }
   &__title {
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+
     color: var(--color-black);
     font-style: normal;
     font-weight: 700;
     line-height: 1.6;
-
     text-transform: uppercase;
-  }
-  &__items:not(:last-child) {
-    margin-right: 30px;
   }
   &__text {
     color: var(--color-757575);
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
+    max-width: 450px;
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
   }
 
   &-icon1::before {
-    content: '';
+    background-image: url(../images/svg/antenna.svg);
+    content: "";
     display: block;
     height: 120px;
-    width: 270px;
-    background-image: url(../images/svg/antenna.svg), url(../images/svg/antennaback.svg);
+    max-width: 450px;
     margin-bottom: 30px;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #f5f4fa;
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
   }
+
   &-icon2::before {
-    content: '';
+    background-image: url(../images/svg/clock.svg);
+    content: "";
     display: block;
     height: 120px;
-    width: 270px;
-    background-image: url(../images/svg/clock.svg), url(../images/svg/antennaback.svg);
+    max-width: 450px;
     margin-bottom: 30px;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #f5f4fa;
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
   }
   &-icon3::before {
-    content: '';
+    background-image: url(../images/svg/diagram.svg);
+    content: "";
     display: block;
     height: 120px;
-    width: 270px;
-    background-image: url(../images/svg/diagram.svg), url(../images/svg/antennaback.svg);
+    max-width: 450px;
     margin-bottom: 30px;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #f5f4fa;
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
   }
   &-icon4::before {
-    content: '';
+    background-image: url(../images/svg/astronaut\ .svg);
+    content: "";
     display: block;
     height: 120px;
-    width: 270px;
-    background-image: url(../images/svg/astronaut\ .svg), url(../images/svg/antennaback.svg);
+    max-width: 450px;
     margin-bottom: 30px;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #f5f4fa;
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
   }
 }
