@@ -81,6 +81,10 @@
   }
 }
 
+// ***********MOB MENU
+.mob-menu.is-open .logo {
+  display: none;
+}
 .mob-menu.is-open {
   display: block;
 }

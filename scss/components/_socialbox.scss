@@ -65,5 +65,8 @@
   }
 }
 .social {
-  margin-left: 70px;
+  margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
