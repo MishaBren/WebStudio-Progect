@@ -167,14 +167,51 @@ img {
   }
 }
 
-.burger {
+.nav {
+  background-color: var(--color-white);
+  border-bottom: 1px solid #eee;
+  height: 60px;
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    height: 80px;
+  }
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  .button {
+    display: none;
+  }
+}
+.button.is-open .button__burger {
+  display: none;
+}
+.button__svg {
   display: inline-block;
   margin-left: auto;
 }
 @media screen and (min-width: 780px) {
-  .burger {
+  .button__svg {
     display: none;
   }
+}
+.button__cross {
+  display: none;
+}
+.button.is-open .button__cross {
+  display: block;
 }
 
 /*Contact*/
@@ -211,7 +248,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .contact :not(:last-child) {
-    padding: 0px 30px;
+    padding-right: 30px;
   }
 }
 .contact__svg {
@@ -247,9 +284,9 @@ img {
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
+  background-repeat: no-repeat;
   background-position: center;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background-hero.jpg");
-  background-repeat: no-repeat;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -277,13 +314,13 @@ img {
   margin-bottom: 0;
   margin-right: auto;
   margin-left: auto;
-  width: 360px;
+  max-width: 360px;
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
     font-size: 44px;
     line-height: 1.36;
-    width: 696px;
+    max-width: 696px;
   }
 }
 .hero__button {
@@ -647,20 +684,24 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
+  padding: 15px;
 }
 
 .modal {
   position: relative;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   max-width: 450px;
   width: 100%;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {

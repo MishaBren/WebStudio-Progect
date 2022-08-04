@@ -3,13 +3,12 @@
   background-color: var(--background-color);
   text-align: center;
   padding-top: 118px;
-
   background-size: cover;
   height: 400px;
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
-
+  background-repeat: no-repeat;
   background-position: center;
   background-image: linear-gradient(
       to right,
@@ -28,7 +27,6 @@
     padding-top: 200px;
   }
 
-  background-repeat: no-repeat;
   &__title {
     color: var(--color-white);
     font-style: normal;
@@ -43,17 +41,11 @@
     margin-bottom: 0;
     margin-right: auto;
     margin-left: auto;
-    width: 360px;
-    // @media screen and (min-width: 780px) {
-    //   font-size: 26px;
-    //   line-height: 1.6;
-    //   width: px;
-    // }
-
+    max-width: 360px;
     @media screen and (min-width: 1200px) {
       font-size: 44px;
       line-height: 1.36;
-      width: 696px;
+      max-width: 696px;
     }
   }
   &__button {
