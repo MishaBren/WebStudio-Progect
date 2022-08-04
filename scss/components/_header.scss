@@ -1,4 +1,7 @@
 /* *************     HEADER */
+// body > header {
+//   border-bottom: 1px solid #e00a0a;
+// }
 .header {
   background-color: var(--color-white);
   border-bottom: 1px solid #eee;
@@ -26,77 +29,99 @@
 }
 /*  header-menu */
 
-.menu.is-open {
-}
-
 .menu {
-  // position: absolute;
-  // background-color: #ffffff;
-  // outline: 1px solid red;
-  // width: 100%;
-  // height: 100%;
-  // width: 480px;
-  // height: 796px;
-  // padding: 30px;
-
-  // &__item {
-  // }
-  display: flex;
-  align-items: center;
-  &__item {
-    margin-left: 87px;
-    @media screen and (min-width: 1200px) {
-      margin-left: 94px;
+  @media screen and (max-width: 768px) {
+    &__item {
+      margin-bottom: 32px;
     }
-    margin-bottom: 0;
-    margin-top: 0;
-    &:not(:first-child) {
-      margin-left: 50px;
+    &__link {
+      color: var(--color-black);
+      text-decoration: none;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    &__item {
+      margin-left: 87px;
+      @media screen and (min-width: 1200px) {
+        margin-left: 94px;
+      }
+      margin-bottom: 0;
+      margin-top: 0;
+      &:not(:first-child) {
+        margin-left: 50px;
+      }
+    }
+    &__link {
+      color: var(--color-black);
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      display: block;
+
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover,
+      &:focus {
+        color: var(--color-blu);
+      }
+    }
+  }
+}
+
+.mob-menu.is-open {
+  display: block;
+}
+.mob-menu {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  background-color: var(--color-white);
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    padding-left: 40px;
+  }
+  &__social {
+    display: flex;
+  }
   &__link {
-    color: var(--color-black);
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.14;
+    font-size: 18px;
+    line-height: 22px;
     letter-spacing: 0.02em;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    display: block;
-
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
-      color: var(--color-blu);
-    }
+    color: #2196f3;
+    margin-left: 10px;
+    margin-right: 10px;
   }
-  @media screen and (max-width: 768px) {
-    //   // position: absolute;
-    display: none;
-  }
-}
-
-.nav {
-  @media screen and (max-width: 768px) {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-  }
-
-  background-color: var(--color-white);
-  border-bottom: 1px solid #eee;
-  height: 60px;
-
-  @media screen and (min-width: 768px) {
-    height: 80px;
+  &__border {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
 }
 
 .button {
+  margin-left: auto;
   background-color: transparent;
   border: none;
   @media screen and (min-width: 768px) {
@@ -123,61 +148,97 @@
 
 /*Contact*/
 .contact {
-  display: block;
-  margin-left: auto;
+  display: flex;
+  flex-direction: column-reverse;
 
-  &__item {
-    @media screen and (min-width: 1200px) {
-      display: inline-block;
+  @media screen and (max-width: 768px) {
+    &__mail {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+      color: #757575;
+      margin-bottom: 65px;
     }
-  }
-  &__link {
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    color: var(--color-grey);
-    padding: 5px 0px;
-
-    display: flex;
-    align-items: center;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
-      color: var(--color-blu);
+    &__tel {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 40px;
+      letter-spacing: 0.02em;
+      color: #2196f3;
+      margin-top: 300px;
+      margin-bottom: 32px;
     }
-
-    @media screen and (max-width: 768px) {
+    &__svg {
       display: none;
     }
   }
-  @media screen and (min-width: 1200px) {
-    :not(:last-child) {
-      padding-right: 30px;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: auto;
+
+    &__item {
+      @media screen and (min-width: 1200px) {
+        display: inline-block;
+      }
+    }
+    &__link {
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      color: var(--color-grey);
+      padding: 5px 0px;
+
+      display: flex;
+      align-items: center;
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover,
+      &:focus {
+        color: var(--color-blu);
+      }
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      :not(:last-child) {
+        padding-right: 30px;
+      }
+    }
+    &__svg {
+      margin-right: 10px;
+      fill: currentColor;
     }
   }
-  &__svg {
-    margin-right: 10px;
-    fill: currentColor;
+}
+@media screen and (min-width: 768px) {
+  .mob-menu__social {
+    display: none;
   }
 }
-
-.page-active {
-  color: var(--color-blu);
-  &::after {
-    content: "";
-    width: 100%;
-    height: 4px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: #2196f3;
-    border-radius: 2px;
+@media screen and (min-width: 768px) {
+  .page-active {
+    color: var(--color-blu);
+    &::after {
+      content: "";
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: #2196f3;
+      border-radius: 2px;
+    }
   }
-}
-.page-relative {
-  position: relative;
+  .page-relative {
+    position: relative;
+  }
 }
