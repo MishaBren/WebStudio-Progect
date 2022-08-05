@@ -10,9 +10,14 @@
     flex-wrap: nowrap;
   }
   &__items {
-    height: 226px;
+    max-height: 226px;
 
-    // @media screen and (min-width: 768px) {
+    @media only screen and (max-width: 768px) {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
     @media only screen and (min-width: 768px) and (max-width: 1200px) {
       height: 224px;
       &:nth-child(2n + 1) {

@@ -65,7 +65,15 @@
   }
 }
 .social {
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    padding-right: 75px;
+  }
+
   margin-top: 20px;
+  @media screen and (max-width: 1200px) {
+    text-align: center;
+  }
+
   @media screen and (min-width: 1200px) {
     margin-left: 70px;
   }
