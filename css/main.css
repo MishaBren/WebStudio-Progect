@@ -646,9 +646,13 @@ img {
   background: var(--color-team);
 }
 
+.tablet-show {
+  display: none;
+}
+
 .team {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 @media screen and (min-width: 1200px) {
   .team {
@@ -658,17 +662,22 @@ img {
 }
 .team__item {
   max-width: 450px;
+  margin-right: 30px;
   background-color: var(--color-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 @media screen and (max-width: 767px) {
+  .team__item {
+    flex-wrap: wrap;
+  }
   .team__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
   .team__item {
+    flex-wrap: wrap;
     max-width: 354px;
   }
   .team__item:nth-child(2n+1) {
