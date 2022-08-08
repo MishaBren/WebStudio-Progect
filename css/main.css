@@ -78,6 +78,11 @@ img {
   padding-right: 15px;
   margin: 0 auto;
 }
+@media screen and (max-width: 480px) {
+  .container {
+    margin: 0;
+  }
+}
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -111,6 +116,11 @@ img {
   .header {
     height: 80px;
   }
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
 }
 
 /***************      LOGO */
@@ -183,10 +193,6 @@ img {
   }
 }
 
-.mob-menu.is-open .logo {
-  display: none;
-}
-
 .mob-menu.is-open {
   display: block;
 }
@@ -195,21 +201,15 @@ img {
   display: none;
   background-color: var(--color-white);
 }
-@media screen and (min-width: 768px) {
-  .mob-menu {
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
-}
 @media screen and (max-width: 768px) {
   .mob-menu {
     position: absolute;
-    top: 50px;
+    top: 0;
     left: 0;
     background-color: #ffffff;
     width: 100%;
-    padding-left: 40px;
+    height: 100%;
+    padding: 48px 40px;
   }
 }
 .mob-menu__social {
@@ -229,9 +229,18 @@ img {
 .mob-menu__border {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
 
 .button {
-  margin-left: auto;
+  position: absolute;
+  right: 22px;
+  top: 22px;
   background-color: transparent;
   border: none;
 }
@@ -247,7 +256,7 @@ img {
   display: inline-block;
   margin-left: auto;
 }
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 768px) {
   .button__svg {
     display: none;
   }
