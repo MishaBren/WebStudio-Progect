@@ -239,8 +239,10 @@ img {
 
 .button {
   position: absolute;
-  right: 22px;
-  top: 22px;
+  right: 0;
+  top: 0;
+  margin-right: 15px;
+  margin-top: 10px;
   background-color: transparent;
   border: none;
 }
