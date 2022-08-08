@@ -1,22 +1,15 @@
 /* *********** CLIENTS */
 .client {
   display: flex;
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
+  justify-content: center;
+  flex-wrap: wrap;
 
-  &__link {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    fill: #afb1b8;
-
-    width: 170px;
-    height: 92px;
+  &__item {
     border: 1px solid #afb1b8;
     border-radius: 4px;
+    width: 100%;
+    height: 92px;
+    margin-bottom: 15px;
 
     transition-property: fill, border;
     transition-duration: 250ms;
@@ -26,5 +19,43 @@
       fill: #2196f3;
       border-color: #2196f3;
     }
+
+    @media screen and (min-width: 480px) {
+      width: 210px;
+      margin-left: 15px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 226px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #afb1b8;
+    height: 100%;
+
+    transition-property: fill, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+      fill: #2196f3;
+      border-color: #2196f3;
+    }
+
+    // @media screen and (min-width: 1200px) {
+    //   width: 170px;
+    // }
   }
 }
