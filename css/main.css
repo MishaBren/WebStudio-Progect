@@ -193,17 +193,18 @@ img {
   }
 }
 
-.mob-menu.is-open {
-  display: block;
-}
-
 .mob-menu {
   display: none;
   background-color: var(--color-white);
 }
+.mob-menu.is-open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 @media screen and (max-width: 768px) {
   .mob-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #ffffff;
@@ -292,7 +293,6 @@ img {
     line-height: 40px;
     letter-spacing: 0.02em;
     color: #2196f3;
-    margin-top: 300px;
     margin-bottom: 32px;
   }
   .contact__svg {

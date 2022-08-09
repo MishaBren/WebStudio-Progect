@@ -86,15 +86,18 @@
 }
 
 // ***********MOB MENU
-.mob-menu.is-open {
-  display: block;
-}
+
 .mob-menu {
   display: none;
   background-color: var(--color-white);
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   @media screen and (max-width: 768px) {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #ffffff;
@@ -181,7 +184,6 @@
       line-height: 40px;
       letter-spacing: 0.02em;
       color: #2196f3;
-      margin-top: 300px;
       margin-bottom: 32px;
     }
     &__svg {
