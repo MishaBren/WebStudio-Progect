@@ -37,7 +37,9 @@
 .menu {
   @media screen and (max-width: 767px) {
     &__item {
-      margin-bottom: 32px;
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
     }
     &__link {
       color: var(--color-black);
@@ -106,9 +108,24 @@
     background-color: var(--color-white);
   }
 }
+
 .mob-menu {
+  &__item:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    margin-right: 20px;
+    padding-right: 10px;
+  }
+  &__link {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+
   @media screen and (max-width: 767px) {
-    // position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -124,20 +141,6 @@
     @media screen and (min-width: 768px) {
       display: none;
     }
-  }
-  &__link {
-    text-decoration: none;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0.02em;
-    color: #2196f3;
-    // margin-left: 10px;
-    // margin-right: 10px;
-  }
-  &__border {
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
 }
 .button-cross {
