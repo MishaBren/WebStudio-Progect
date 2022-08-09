@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="uk">
 
-<!--****      HEAD -->
+<!--****     HEAD -->
 
 <head>
   <meta charset="UTF-8" />
@@ -22,66 +22,77 @@
 
 <body class="body">
   <header class="header">
-    <div class="container header-container">
+    <div class="container">
 
-      <div class="logo">
-        <a class="logo__header" href="index.html">
-          <span class="logo__span">Web</span>Studio</a>
-      </div>
+      <div class="header-container">
+        <div class="logo">
+          <a class="logo__header" href="index.html">
+            <span class="logo__span">Web</span>Studio</a>
+        </div>
 
-      <div class="mob-menu" data-menu>
+        <div class="mob-menu" mob-modal>
 
-        <nav>
-          <ul class="menu">
-            <li class="menu__item page-relative">
-              <a class="menu__link page-active" href="">Студія</a>
+          <button class="button-cross" mob-modal-close type="button">
+            <svg class="button__svg" width="24" height="24" aria-label="меню">
+              <!-- <use class="button__burger" href="./images/symbol-defs.svg#icon-burger"></use> -->
+              <use class="" href="./images/symbol-defs.svg#icon-Vector"></use>
+            </svg>
+          </button>
+
+          <nav>
+            <ul class="menu">
+              <li class="menu__item page-relative">
+                <a class="menu__link page-active" href="">Студія</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="contact">
+            <li>
+              <ul class="mob-menu__social">
+                <li class="mob-menu__item mob-menu__border"><a class="mob-menu__link" href="">Instagram</a></li>
+                <li class="mob-menu__item mob-menu__border"><a class="mob-menu__link" href="">Twitter</a></li>
+                <li class="mob-menu__item mob-menu__border"><a class="mob-menu__link" href="">Facebook</a></li>
+                <li class="mob-menu__item"><a class="mob-menu__link" href="">Linkedin</a></li>
+              </ul>
+
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="./portfolio.html">Портфоліо</a>
+
+            <li class="contact__item">
+              <a class="contact__link contact__mail" href="">
+                <svg class="contact__svg" width="16" height="12">
+                  <use href="./images/symbol-defs.svg#icon-mail"></use>
+                </svg>info@devstudio.com</a>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="">Контакти</a>
+            <li class="contact__item">
+              <a class="contact__link contact__tel" href="">
+                <svg class="contact__svg" width="10" height="16">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                </svg>+38 096 111 11 11</a>
             </li>
           </ul>
-        </nav>
 
-        <ul class="contact">
-          <li>
-            <ul class="mob-menu__social">
-              <li class="mob-menu__item mob-menu__border"><a class="mob-menu__link" href="">Instagram</a></li>
-              <li class="mob-menu__item mob-menu__border"><a class="mob-menu__link" href="">Twitter</a></li>
-              <li class="mob-menu__item mob-menu__border"><a class="mob-menu__link" href="">Facebook</a></li>
-              <li class="mob-menu__item"><a class="mob-menu__link" href="">Linkedin</a></li>
-            </ul>
+        </div>
 
-          </li>
-
-          <li class="contact__item">
-            <a class="contact__link contact__mail" href="">
-              <svg class="contact__svg" width="16" height="12">
-                <use href="./images/symbol-defs.svg#icon-mail"></use>
-              </svg>info@devstudio.com</a>
-          </li>
-          <li class="contact__item">
-            <a class="contact__link contact__tel" href="">
-              <svg class="contact__svg" width="10" height="16">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>+38 096 111 11 11</a>
-          </li>
-        </ul>
+        <button class="button-burger" mob-modal-open type="button">
+          <svg class="button__svg" width="24" height="24" aria-label="меню">
+            <use class="button__burger" href="./images/symbol-defs.svg#icon-burger"></use>
+            <!-- <use class="button__cross" href="./images/symbol-defs.svg#icon-Vector"></use> -->
+          </svg>
+        </button>
 
       </div>
-
-      <button class="button" data-menu-button aria-expanded="false" type="button">
-        <svg class="button__svg" width="24" height="24" aria-label="меню">
-          <use class="button__burger" href="./images/symbol-defs.svg#icon-burger"></use>
-          <use class="button__cross" href="./images/symbol-defs.svg#icon-Vector"></use>
-        </svg>
-      </button>
 
     </div>
 
   </header>
+
   <!-- ** MAIN -->
   <main>
     <!--****   HERO -->
@@ -650,7 +661,6 @@
   <!-- ***********   SCRIPT -->
   <script src="./js/modal.js"></script>
   <script src="./js/mob-menu.js"></script>
-
 </body>
 
 </html>

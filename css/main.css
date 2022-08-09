@@ -78,13 +78,9 @@ img {
   padding-right: 15px;
   margin: 0 auto;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .container {
     margin: 0;
-  }
-}
-@media screen and (min-width: 480px) {
-  .container {
     width: 480px;
   }
 }
@@ -121,6 +117,8 @@ img {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /***************      LOGO */
@@ -207,7 +205,6 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #ffffff;
     width: 100%;
     height: 100%;
     padding: 48px 40px;
@@ -238,37 +235,19 @@ img {
   }
 }
 
-.button {
+.button-cross {
+  border: none;
+  background-color: transparent;
   position: absolute;
   right: 0;
   top: 0;
   margin-right: 15px;
   margin-top: 10px;
-  background-color: transparent;
+}
+
+.button-burger {
   border: none;
-}
-@media screen and (min-width: 768px) {
-  .button {
-    display: none;
-  }
-}
-.button.is-open .button__burger {
-  display: none;
-}
-.button__svg {
-  display: inline-block;
-  margin-left: auto;
-}
-@media screen and (min-width: 768px) {
-  .button__svg {
-    display: none;
-  }
-}
-.button__cross {
-  display: none;
-}
-.button.is-open .button__cross {
-  display: block;
+  background-color: transparent;
 }
 
 /*Contact*/
