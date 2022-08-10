@@ -70,8 +70,8 @@
     text-decoration: none;
   }
 }
-/* **********   Social-footer */
 
+/* **********   Social-footer */
 .strong {
   text-decoration: none;
   font-style: normal;
@@ -83,12 +83,13 @@
 
 /* *** Subscribe */
 .subscribe {
+  margin-left: auto;
+
   @media screen and (max-width: 1200px) {
     margin-top: 60px;
     text-align: center;
   }
 
-  margin-left: auto;
   &__box {
     text-align: center;
     @media screen and (min-width: 1200px) {
@@ -122,20 +123,6 @@
     }
   }
   &__input {
-    width: 100%;
-
-    @media screen and (min-width: 768px) and (max-width: 1200px) {
-      width: 358px;
-    }
-
-    @media screen and (max-width: 1200px) {
-      margin-bottom: 20px;
-      margin-top: 20px;
-    }
-    @media screen and (min-width: 1200px) {
-      width: 358px;
-    }
-
     background: #2f303a;
     height: 50px;
     left: 20px;
@@ -145,6 +132,19 @@
     border-radius: 4px;
     color: #ffffff;
     padding: 15px 16px;
+
+    width: 100%;
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      width: 358px;
+    }
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
   }
 
   &__svg {

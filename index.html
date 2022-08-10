@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="uk">
 
-<!--****      HEAD -->
+<!--****     HEAD -->
 
 <head>
   <meta charset="UTF-8" />
@@ -22,68 +22,78 @@
 
 <body class="body">
   <header class="header">
-    <div class="container header-container">
+    <div class="container">
 
-      <div class="logo">
-        <a class="logo__header" href="index.html">
-          <span class="logo__span">Web</span>Studio</a>
+      <div class="header-container">
+        <div class="logo">
+          <a class="logo__header" href="index.html">
+            <span class="logo__span">Web</span>Studio</a>
+        </div>
+
+        <div class="mob-backdrop" mob-modal>
+          <div class="mob-menu">
+
+            <button class="button-cross" mob-modal-close type="button">
+              <svg class="button__svg" width="24" height="24" aria-label="меню">
+                <!-- <use class="button__burger" href="./images/symbol-defs.svg#icon-burger"></use> -->
+                <use class="" href="./images/symbol-defs.svg#icon-Vector"></use>
+              </svg>
+            </button>
+
+            <nav>
+              <ul class="menu">
+                <li class="menu__item page-relative">
+                  <a class="menu__link page-active" href="">Студія</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+
+            <ul class="contact">
+              <ul class="mob-menu__social">
+                <li class="mob-menu__item mob-menu__border"><a class="mob-menu__link" href="">Instagram</a></li>
+                <li class="mob-menu__item mob-menu__border"><a class="mob-menu__link" href="">Twitter</a></li>
+                <li class="mob-menu__item mob-menu__border"><a class="mob-menu__link" href="">Facebook</a></li>
+                <li class="mob-menu__item"><a class="mob-menu__link" href="">Linkedin</a></li>
+              </ul>
+
+
+              <li class="contact__item">
+                <a class="contact__link contact__mail" href="">
+                  <svg class="contact__svg" width="16" height="12">
+                    <use href="./images/symbol-defs.svg#icon-mail"></use>
+                  </svg>info@devstudio.com</a>
+              </li>
+              <li class="contact__item">
+                <a class="contact__link contact__tel" href="">
+                  <svg class="contact__svg" width="10" height="16">
+                    <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                  </svg>+38 096 111 11 11</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <button class="button-burger" mob-modal-open type="button">
+          <svg class="button__svg" width="24" height="24" aria-label="меню">
+            <use class="button__burger" href="./images/symbol-defs.svg#icon-burger"></use>
+            <!-- <use class="button__cross" href="./images/symbol-defs.svg#icon-Vector"></use> -->
+          </svg>
+        </button>
+
       </div>
-
-
-      <div class="mob-menu" data-menu>
-
-        <nav>
-          <ul class="menu">
-            <li class="menu__item page-relative">
-              <a class="menu__link page-active" href="">Студія</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-
-        <ul class="contact">
-          <li class="contact__item">
-            <a class="contact__link contact__mail" href="">
-              <svg class="contact__svg" width="16" height="12">
-                <use href="./images/symbol-defs.svg#icon-mail"></use>
-              </svg>info@devstudio.com</a>
-          </li>
-          <li class="contact__item">
-            <a class="contact__link contact__tel" href="">
-              <svg class="contact__svg" width="10" height="16">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>+38 096 111 11 11</a>
-          </li>
-        </ul>
-
-        <ul class="mob-menu__social">
-          <li class="mob-menu__item mob-menu__border"><a class="mob-menu__link" href="">Instagram</a></li>
-          <li class="mob-menu__item mob-menu__border"><a class="mob-menu__link" href="">Twitter</a></li>
-          <li class="mob-menu__item mob-menu__border"><a class="mob-menu__link" href="">Facebook</a></li>
-          <li class="mob-menu__item"><a class="mob-menu__link" href="">Linkedin</a></li>
-        </ul>
-
-      </div>
-
-      <button class="button" data-menu-button aria-expanded="false" type="button">
-        <svg class="button__svg" width="24" height="24" aria-label="меню">
-          <use class="button__burger" href="./images/symbol-defs.svg#icon-burger"></use>
-          <use class="button__cross" href="./images/symbol-defs.svg#icon-Vector"></use>
-        </svg>
-      </button>
-
-
-
 
     </div>
 
   </header>
 
+  <!-- ** MAIN -->
   <main>
     <!--****   HERO -->
     <section class="hero">
@@ -129,19 +139,25 @@
         <h2 class="title-secondary">Чим ми займаємося</h2>
         <ul class="work">
           <li class="work__item">
-            <img src="./images/img.png" alt="Друкуємо" width="370" />
+            <!-- 1 -->
+
+            <img srcset="./images/img/box1_370(1).jpg 1x,./images/img/box1_370(2).jpg 2x"
+              src="./images/img/box1_370(1).jpg" width="370" alt="Пишемо код">
+
             <div class="work__bck">
               <p class="work__text">десктопні додатки</p>
             </div>
           </li>
           <li class="work__item">
-            <img src="./images/img2.png" alt="Аналізуємо" width="370" />
+            <img srcset="./images/img/box2_370(1).jpg 1x ,./images/img/box2_370(2).jpg 2x"
+              src="./images/img/box2_370(1).jpg" width="370" alt="Пишемо код">
             <div class="work__bck">
               <p class="work__text">мобільні додатки</p>
             </div>
           </li>
           <li class="work__item">
-            <img src="./images/img3.png" alt="Малюємо" width="370" />
+            <img srcset="./images/img/box3_370(1).jpg 1x,./images/img/box3_370(2).jpg 2x"
+              src="./images/img/box3_370(1).jpg" width="370" alt="Пишемо код">
             <div class="work__bck">
               <p class="work__text">дизайнерські рішення</p>
             </div>
@@ -156,7 +172,19 @@
         <h2 class="title-secondary">Наша команда</h2>
         <ul class="team">
           <li class="team__item">
-            <img class="team__foto" src="./images/ihor.jpg" alt="Игорь" width="" />
+            <picture>
+              <source srcset="./images/img/team1_450(1).jpg 1x, ./images/img/team1_450(2).jpg 2x "
+                media="(max-width:767px)" />
+
+              <source srcset="./images/img/team1_354(1).jpg 1x, ./images/img/team1_354(2).jpg 2x "
+                media="(max-width:1199px)" />
+
+              <source srcset="./images/img/team1_270(1).jpg 1x, ./images/img/team1_270(2).jpg 2x "
+                media="(min-width:1200px)" />
+
+              <img class="team__img" src="./images/img/team1_270.jpg" width="270"
+                alt="Игор Демьяненко - Product Designer">
+            </picture>
             <div class="team__visit">
               <h3 class="team__name">Игор Демяненко</h3>
               <p class="team__work">Product Designer</p>
@@ -193,7 +221,19 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/oljga.jpg" alt="Ольга" width="" />
+            <picture>
+              <source srcset="./images/img/team2_450(1).jpg 1x, ./images/img/team2_450(2).jpg 2x "
+                media="(max-width:767px)" />
+
+              <source srcset="./images/img/team2_354(1).jpg 1x, ./images/img/team2_354(2).jpg 2x "
+                media="(max-width:1199px)" />
+
+              <source srcset="./images/img/team2_270(1).jpg 1x, ./images/img/team2_270(2).jpg 2x "
+                media="(min-width:1200px)" />
+
+              <img class="team__img" src="./images/img/team2_270.jpg" width="270"
+                alt="Игор Демьяненко - Product Designer">
+            </picture>
             <div class="team__visit">
               <h3 class="team__name">Ольга Репина</h3>
               <p class="team__work">Frontend Developer</p>
@@ -230,7 +270,19 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/nikola.jpg" alt="Николай" width="" />
+            <picture>
+              <source srcset="./images/img/team3_450(1).jpg 1x, ./images/img/team3_450(2).jpg 2x "
+                media="(max-width:767px)" />
+
+              <source srcset="./images/img/team3_354(1).jpg 1x, ./images/img/team3_354(2).jpg 2x "
+                media="(max-width:1199px)" />
+
+              <source srcset="./images/img/team3_270(1).jpg 1x, ./images/img/team3_270(2).jpg 2x "
+                media="(min-width:1200px)" />
+
+              <img class="team__img" src="./images/img/team3_270.jpg" width="270"
+                alt="Игор Демьяненко - Product Designer">
+            </picture>
             <div class="team__visit">
               <h3 class="team__name">Микола Тарасов</h3>
               <p class="team__work">Marketing</p>
@@ -267,7 +319,19 @@
             </div>
           </li>
           <li class="team__item">
-            <img src="./images/mikhailo.jpg" alt="Михаил" width="" />
+            <picture>
+              <source srcset="./images/img/team4_450(1).jpg 1x, ./images/img/team4_450(2).jpg 2x "
+                media="(max-width:767px)" />
+
+              <source srcset="./images/img/team4_354(1).jpg 1x, ./images/img/team4_354(2).jpg 2x "
+                media="(max-width:1199px)" />
+
+              <source srcset="./images/img/team4_270(1).jpg 1x, ./images/img/team4_270(2).jpg 2x "
+                media="(min-width:1200px)" />
+
+              <img class="team__img" src="./images/img/team4_270.jpg" width="270"
+                alt="Игор Демьяненко - Product Designer">
+            </picture>
             <div class="team__visit">
               <h3 class="team__name">Михайло Єрмаков</h3>
               <p class="team__work">UI Designer</p>
@@ -488,16 +552,18 @@
               </svg>
             </span>
           </button>
+
         </div>
+
       </div>
 
+    </div>
     </div>
   </footer>
 
   <!-- ***********   SCRIPT -->
   <script src="./js/modal.js"></script>
   <script src="./js/mob-menu.js"></script>
-
 </body>
 
 </html>

@@ -2,9 +2,16 @@
 .background {
   background: var(--color-team);
 }
+
+.tablet-show {
+  display: none;
+}
+
 .team {
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -12,7 +19,10 @@
   }
 
   &__item {
-    max-width: 450px;
+    background-color: var(--color-white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 
     @media screen and (max-width: 767px) {
       &:not(:last-child) {
@@ -21,7 +31,6 @@
     }
 
     @media only screen and (min-width: 768px) and (max-width: 1200px) {
-      max-width: 354px;
       &:nth-child(2n + 1) {
         margin-right: 30px;
       }
@@ -29,17 +38,15 @@
         margin-bottom: 30px;
       }
     }
-    background-color: var(--color-white);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
 
     @media screen and (min-width: 1200px) {
       &:not(:last-child) {
         margin-right: 30px;
       }
-      max-width: 270px;
     }
+  }
+  &__img {
+    width: 100%;
   }
   &__name {
     font-style: normal;
